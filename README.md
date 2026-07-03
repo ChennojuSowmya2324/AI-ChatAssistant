@@ -1,61 +1,89 @@
-# Gemini AI Chatbot
+# AI ChatAssistant
 
-A conversational AI chatbot built using Python, Flask, and Google's Gemini API. Unlike rule-based chatbots, this uses a generative LLM to produce dynamic, context-aware responses.
 
-## Tech Stack
-- Python
-- Flask
-- Google Generative AI SDK (Gemini API)
-- HTML / CSS / JavaScript (frontend)
+A conversational AI chatbot built using Python, Flask, and Google's Gemini API. Unlike rule-based chatbots, this uses a generative LLM to produce dynamic, context-aware responses in real time.
 
-## Features
-- Real-time chat interface
-- Maintains conversation context/history
-- Simple REST API (`/chat` endpoint)
-- Easy to deploy on Render/Railway/PythonAnywhere
+Features
 
-## Setup Instructions
 
-1. Clone/extract the project and open the folder.
+Real-time chat interface
+Context-aware conversation (maintains chat history)
+REST API architecture (/chat endpoint)
+Secure API key handling via environment variables
+Deployment-ready (Render)
 
-2. Create a virtual environment (optional but recommended):
-   ```
-   python -m venv venv
-   venv\Scripts\activate      # Windows
-   source venv/bin/activate   # Mac/Linux
-   ```
 
-3. Install dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
+Tech Stack
 
-4. Get a free Gemini API key from [Google AI Studio](https://aistudio.google.com).
 
-5. Rename `.env.example` to `.env` and add your key:
-   ```
+Backend: Python, Flask
+AI Model: Google Gemini API (gemini-1.5-flash)
+Frontend: HTML, CSS, JavaScript
+Other: python-dotenv (environment variable management)
+
+
+Project Structure
+
+gemini-chatbot/
+├── app.py
+├── templates/
+│   └── index.html
+├── requirements.txt
+├── .env.example
+├── .gitignore
+└── README.md
+
+Setup Instructions
+
+
+Clone the repository:
+
+
+bash   git clone https://github.com/ChennojuSowmya2324/gemini-chatbot.git
+   cd gemini-chatbot
+   
+Install dependencies:
+
+bash   pip install -r requirements.txt
+
+
+Get a free Gemini API key from Google AI Studio.
+Rename .env.example to .env and add your key:
+
+
    GEMINI_API_KEY=your_actual_key_here
-   ```
+   
+Run the app:
 
-6. Run the app:
-   ```
-   python app.py
-   ```
+bash   python app.py
 
-7. Open `http://127.0.0.1:5000` in your browser.
+Open http://127.0.0.1:5000 in your browser.
 
-## Deployment
-Push to GitHub, then deploy on [Render](https://render.com):
-- Build command: `pip install -r requirements.txt`
-- Start command: `python app.py`
-- Add `GEMINI_API_KEY` as an environment variable in Render's dashboard.
+Deployment
 
-## Resume Keywords
-Generative AI, Google Gemini API, Python, Flask, REST API, Conversational AI, Chatbot Development, Prompt Engineering
+Deployed on Render:
 
-## Possible Extensions
-- Add RAG (Retrieval Augmented Generation) with a PDF/knowledge base
-- Add file upload support
-- Add user authentication and chat history storage (SQLite)
-- Deploy with a custom domain
-# gemini-chatbot
+Build Command: pip install -r requirements.txt
+Start Command: python app.py
+Add GEMINI_API_KEY as an environment variable in Render's dashboard.
+
+Key Concepts Demonstrated
+
+REST API design with Flask
+Generative AI integration (LLM API calls)
+Environment variable security (no hardcoded keys)
+Session-based chat context handling
+
+
+Future Improvements
+
+
+Add RAG (Retrieval Augmented Generation) with a PDF knowledge base
+Add user authentication
+Store chat history in SQLite
+Add file upload support
+
+
+Author
+
+Sowmya Chennoju
